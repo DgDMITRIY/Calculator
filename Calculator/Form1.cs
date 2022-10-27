@@ -18,8 +18,11 @@ namespace Калькулятор
         }
 
         private void BtnClose_MouseEnter(object sender, EventArgs e2) => btnClose.BackColor = Color.Red;
+
         private void BtnCLose_MouseLeave(object sender, EventArgs e) => btnClose.BackColor = Color.WhiteSmoke;
+
         private void BtnClose_Click(object sender, EventArgs e) => Close();
+
         private void BtnMinimaze_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
         
         private bool CanPress()
@@ -66,7 +69,6 @@ namespace Калькулятор
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
             if (e.KeyChar == (char)Keys.Add)
             {
-                BtnPlus_Click(sender, e);
                 e.Handled = true;
             }
 
@@ -97,6 +99,7 @@ namespace Калькулятор
                 _calculatorServices.numb_sign = true;
             }
         }
+
         private void BtnEqual_Click(object sender, EventArgs e)
         {
             if (!BtnMult.Enabled)
@@ -132,96 +135,15 @@ namespace Калькулятор
             FocusTextBoxCalc();
             FreeButtons();
         }
-        private void Btn_0_Click(object sender, EventArgs e)
+
+        private void Btn_Common_Number_Click(object sender, EventArgs e)
         {
-            if(textBoxCalc.Text.Length > 8)
+            Button btn = sender as Button;
+            if (textBoxCalc.Text.Length > 8) 
                 return;
-
             DeleteZero();
-            textBoxCalc.Text += "0";
-            FocusTextBoxCalc();
-        }
-
-        private void Btn_1_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "1";
-            FocusTextBoxCalc();
-        }
-        private void Btn_2_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "2";
-            FocusTextBoxCalc();
-        }
-        private void Btn_3_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "3";
-            FocusTextBoxCalc();
-        }
-        private void Btn_4_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "4";
-            FocusTextBoxCalc();
-        }
-        private void Btn_5_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "5";
-            FocusTextBoxCalc();
-        }
-        private void Btn_6_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "6";
-            FocusTextBoxCalc();
-        }
-        private void btn_7_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "7";
-            FocusTextBoxCalc();
-        }
-        private void Btn_8_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "8";
-            FocusTextBoxCalc();
-        }
-
-        private void btn_9_Click(object sender, EventArgs e)
-        {
-            if (textBoxCalc.Text.Length > 8)
-                return;
-
-            DeleteZero();
-            textBoxCalc.Text += "9";
+            string variable = (string)btn.Text;
+            textBoxCalc.Text += variable;
             FocusTextBoxCalc();
         }
 
@@ -240,6 +162,7 @@ namespace Калькулятор
                 EraseNumbSign();
             }
         }
+
         private void BtnMult_Click(object sender, EventArgs e)
         {
             if (CanPress() && textBoxCalc.Text != " EXCEEDED" && textBoxCalc.Text != "  NOT ÷ 0")

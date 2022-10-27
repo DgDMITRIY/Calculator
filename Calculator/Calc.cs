@@ -1,47 +1,44 @@
-﻿using System;
-using System.Windows.Forms;
-using System.Text;
-using System.Data;
+﻿using System.Windows.Forms;
 
 namespace Калькулятор
 {
     public class Calc
     {
-        private double a = 0; // первое вводимое число (по умолчанию, равно 0)
-        public bool numb_sign = true; //переменная для проверки знака числа (при верном значени - положительное число, при другом - отрицательное)
+        public double first_number = 0; 
+        public bool numb_sign = true; 
 
-        public double Put_A(double a, Label lbl)
+        public double Put_A(double first_number, Label lbl_numbchange)
         {
-            if (lbl.Text == "-")
-                return this.a = (-1.0) * a;
-            return this.a = a;
+            if (lbl_numbchange.Text == "-")
+                return this.first_number = (-1.0) * first_number;
+            return this.first_number = first_number;
         }
 
-        public void Clear_A() => a = 0;
+        public void Clear_A() => first_number = 0;
 
-        public double Multiplication(double b, Label lbl)
+        public double Multiplication(double second_number, Label lbl_numb_sign)
         {
-            if (lbl.Text == "-")
-                return (-1.0) * a * b;
-            return a * b;
+            if (lbl_numb_sign.Text == "-")
+                return (-1.0) * first_number * second_number;
+            return first_number * second_number;
         }
-        public double Division(double b, Label lbl)
+        public double Division(double second_number, Label lbl_numb_sign)
         {
-            if (lbl.Text == "-")
-                return a / ((-1.0) * b);
-            return a / b;
+            if (lbl_numb_sign.Text == "-")
+                return first_number / ((-1.0) * second_number);
+            return first_number / second_number;
         }
-        public double Sum(double b, Label lbl)
+        public double Sum(double second_number, Label lbl_numb_sign)
         {
-            if (lbl.Text == "-")
-                return a + ((-1.0) * b);
-            return a + b;
+            if (lbl_numb_sign.Text == "-")
+                return first_number + ((-1.0) * second_number);
+            return first_number + second_number;
         }
-        public double Subtraction(double b, Label lbl)
+        public double Subtraction(double second_number, Label lbl_numb_sign)
         {
-            if (lbl.Text == "-")
-                return a - ((-1.0) * b);
-            return a - b;
+            if (lbl_numb_sign.Text == "-")
+                return first_number - ((-1.0) * second_number);
+            return first_number - second_number;
         }
     }
 }

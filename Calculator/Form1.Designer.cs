@@ -184,7 +184,7 @@ namespace Калькулятор
             this.Btn_0.TabIndex = 12;
             this.Btn_0.Text = "0";
             this.Btn_0.UseVisualStyleBackColor = true;
-            this.Btn_0.Click += new System.EventHandler(this.Btn_0_Click);
+            this.Btn_0.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // BtnMult
             // 
@@ -207,7 +207,7 @@ namespace Калькулятор
             this.Btn_9.TabIndex = 10;
             this.Btn_9.Text = "9";
             this.Btn_9.UseVisualStyleBackColor = true;
-            this.Btn_9.Click += new System.EventHandler(this.btn_9_Click);
+            this.Btn_9.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // Btn_8
             // 
@@ -218,7 +218,7 @@ namespace Калькулятор
             this.Btn_8.TabIndex = 9;
             this.Btn_8.Text = "8";
             this.Btn_8.UseVisualStyleBackColor = true;
-            this.Btn_8.Click += new System.EventHandler(this.Btn_8_Click);
+            this.Btn_8.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // Btn_7
             // 
@@ -229,7 +229,7 @@ namespace Калькулятор
             this.Btn_7.TabIndex = 8;
             this.Btn_7.Text = "7";
             this.Btn_7.UseVisualStyleBackColor = true;
-            this.Btn_7.Click += new System.EventHandler(this.btn_7_Click);
+            this.Btn_7.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // BtnMinus
             // 
@@ -252,7 +252,7 @@ namespace Калькулятор
             this.Btn_6.TabIndex = 6;
             this.Btn_6.Text = "6";
             this.Btn_6.UseVisualStyleBackColor = true;
-            this.Btn_6.Click += new System.EventHandler(this.Btn_6_Click);
+            this.Btn_6.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // Btn_5
             // 
@@ -263,7 +263,7 @@ namespace Калькулятор
             this.Btn_5.TabIndex = 5;
             this.Btn_5.Text = "5";
             this.Btn_5.UseVisualStyleBackColor = true;
-            this.Btn_5.Click += new System.EventHandler(this.Btn_5_Click);
+            this.Btn_5.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // Btn_4
             // 
@@ -274,7 +274,7 @@ namespace Калькулятор
             this.Btn_4.TabIndex = 4;
             this.Btn_4.Text = "4";
             this.Btn_4.UseVisualStyleBackColor = true;
-            this.Btn_4.Click += new System.EventHandler(this.Btn_4_Click);
+            this.Btn_4.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // BtnPlus
             // 
@@ -298,7 +298,7 @@ namespace Калькулятор
             this.Btn_3.TabIndex = 2;
             this.Btn_3.Text = "3";
             this.Btn_3.UseVisualStyleBackColor = true;
-            this.Btn_3.Click += new System.EventHandler(this.Btn_3_Click);
+            this.Btn_3.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // Btn_2
             // 
@@ -309,7 +309,7 @@ namespace Калькулятор
             this.Btn_2.TabIndex = 1;
             this.Btn_2.Text = "2";
             this.Btn_2.UseVisualStyleBackColor = true;
-            this.Btn_2.Click += new System.EventHandler(this.Btn_2_Click);
+            this.Btn_2.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // Btn_1
             // 
@@ -320,7 +320,7 @@ namespace Калькулятор
             this.Btn_1.TabIndex = 0;
             this.Btn_1.Text = "1";
             this.Btn_1.UseVisualStyleBackColor = true;
-            this.Btn_1.Click += new System.EventHandler(this.Btn_1_Click);
+            this.Btn_1.Click += new System.EventHandler(this.Btn_Common_Number_Click);
             // 
             // BtnEqual
             // 
